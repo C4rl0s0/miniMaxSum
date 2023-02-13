@@ -1,0 +1,32 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {   
+    public static long minSum;
+    public static long maxSum;
+    
+    public Result() {
+        minSum = 0;
+        maxSum = 0;
+    }
+
+    public static void miniMaxSum(List<Integer> arr) {
+        Collections.sort(arr);
+        for (int i = 0; i < 4; i++) {
+            minSum += arr.get(i);
+        }
+        for (int i = 1; i < 5; i++) {
+            maxSum += arr.get(i);
+        }
+    }
+
+}
